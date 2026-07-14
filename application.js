@@ -27,8 +27,9 @@ System.register([], function (_export, _context) {
         }, {
           key: "onPostInitBase",
           value: function onPostInitBase() {
-            // cc.settings.overrideSettings('assets', 'server', '');
-            // do custom logic
+            // SubFrame 모드 강제: portrait CSS min() 공식이 GameDiv 크기를 직접 제어
+            // exactFitScreen=true이면 BrowserWindow 모드가 되어 GameDiv가 전체 화면을 덮음
+            cc.settings.overrideSettings('screen', 'exactFitScreen', false);
           }
         }, {
           key: "onPostSystemInit",
@@ -42,9 +43,6 @@ System.register([], function (_export, _context) {
               debugMode: false ? cc.DebugMode.INFO : cc.DebugMode.ERROR,
               settingsPath: this.settingsPath,
               overrideSettings: {
-                // assets: {
-                //      preloadBundles: [{ bundle: 'main', version: 'xxx' }],
-                // }
                 profiling: {
                   showFPS: this.showFPS
                 }

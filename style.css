@@ -35,7 +35,7 @@ body {
 
   cursor: default;
   color: #888;
-  background-color: #000;
+  background-color: transparent;
 
   text-align: center;
   font-family: Helvetica, Verdana, Arial, sans-serif;
@@ -46,12 +46,15 @@ body {
   overflow: hidden;
 }
 
+
 canvas {
   background-color: rgba(0, 0, 0, 0);
 }
 
 #GameDiv {
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
   width: min(100vw, calc(100vh * 720 / 1280));
   height: min(100vh, calc(100vw * 1280 / 720));
 }
