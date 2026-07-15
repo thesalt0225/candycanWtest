@@ -1,5 +1,6 @@
 html {
   -ms-touch-action: none;
+  background-color: #000;
 }
 
 body, canvas, div {
@@ -55,6 +56,7 @@ canvas {
   flex-shrink: 0;
   position: relative;
   z-index: 1;
+  background-color: #000;
   width: min(100vw, calc(100vh * 720 / 1280));
   height: min(100vh, calc(100vw * 1280 / 720));
 }
